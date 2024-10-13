@@ -1,0 +1,80 @@
+[WEATHER_SIGNALER]
+command=~/.config/i3blocks/weather/weather_signaler
+interval=once
+
+[WEATHER]
+command=~/.config/i3blocks/weather/weather_info.sh
+interval=300
+color=#FEC925
+signal=2
+
+[shutdown_menu]
+full_text=🔲
+# If you are using FontAwesome, we recommend the power-off icon:
+# http://fontawesome.io/icon/power-off/
+command=~/.config/i3blocks/shutdown/shutdown.sh
+#FG_COLOR=#bbbbbb
+#BG_COLOR=#111111
+#HLFG_COLOR=#111111
+#HLBG_COLOR=#bbbbbb
+#BORDER_COLOR=#222222
+#ROFI_TEXT=Menu:
+#ROFI_OPTIONS=-width 11 -location 3 -hide-scrollbar -bw 2
+#ZENITY_TITLE=Menu
+#ZENITY_TEXT=Action:
+#ZENITY_OPTIONS=--column= --hide-header
+#ENABLE_CONFIRMATIONS=true (must be true or false)
+#LAUNCHER=rofi (must be rofi or zenity)
+#LOCKSCRIPT=i3lock --color=${BG_COLOR#"#"}
+
+[arch-update]
+command=~/.config/i3blocks/arch-update/arch-update.sh 
+interval=3600
+markup=pango
+LABEL=♻️Updates: 
+
+[DISK]
+command=df -h / | awk '/\//{ printf(" 💾 %4s/%s \n", $4, $2) }'
+interval=2:
+color=#C9E3DB
+
+
+[cpu_usage]
+command=~/.config/i3blocks/cpu/cpu_info.sh
+interval=10
+LABEL=CPU 
+#min_width=CPU: 100.00%
+#T_WARN=50
+#T_CRIT=80
+#DECIMALS=2
+#COLOR_NORMAL=#EBDBB2
+#COLOR_WARN=#FFFC00
+#COLOR_CRIT=#FF0000
+
+[BATTERY]
+command=~/.config/i3blocks/battery/battery_info.sh
+interval=3
+
+
+
+
+[MEM]
+command=free -h | awk '/Mem:/ { printf(" 🐏 %5s/%s \n", $3, $2) }'
+interval=1
+color=#FEC925
+
+[volume-pulseaudio]
+command=~/.config/i3blocks/volume/volume
+interval=persist
+SUBSCRIBE=1
+USE_ALSA_NAME=1
+
+
+
+[TIME_DATE]
+command=date +" %a, %d %b - %H:%M:%S"
+interval=1
+
+[kbdd_layout]
+command=~/.config/i3blocks/layout/layout.sh
+interval=persist

@@ -1,3 +1,7 @@
+[general]
+update_interval=1
+
+
 [WEATHER_SIGNALER]
 command=~/.config/i3blocks/weather/weather_signaler
 interval=once

@@ -1,0 +1,96 @@
+* {
+    font: "Figtree 13";
+    g-spacing: 10px;
+    g-margin: 0;
+    b-color: #2e2e2e;
+    fg-color: #ffcc00;          /* Цвет текста */
+    fgp-color: #888888FF;      /* Цвет текста плейсхолдера */
+    b-radius: 8px;             /* Закругление углов */
+    g-padding: 8px;            /* Отступы внутри элементов */
+    hl-color: #ffffff;         /* Цвет выделенного текста */
+    hlt-color: #2e2e2e;       /* Цвет фона выделенного текста */
+    alt-color: #111111FF;      /* Альтернативный цвет фона */
+    wbg-color: #2e2e2e;       /* Фоновый цвет окна */
+    w-border: 2px solid;       /* Рамка окна */
+    w-border-color: #ffffff;   /* Цвет рамки окна */
+    w-padding: 12px;           /* Отступы окна */
+}
+
+configuration {
+    modi: "run,ssh";                     /* Режимы работы rofi */
+    font: "monospace 12";                /* Шрифт для текста */
+    lines: 10;                           /* Количество строк в списке */
+    width: 50%;                          /* Ширина окна */
+    padding: 10px;                       /* Отступы окна */
+    background-color: #2e2e2e;          /* Фоновый цвет окна */
+    foreground-color: #ffcc00;           /* Цвет текста */
+    selected-background: #ffcc00;        /* Цвет фона для выбранного элемента */
+    selected-foreground: #2e2e2e;        /* Цвет текста для выбранного элемента */
+    separator-style: none;                /* Убираем разделители */
+    border: 0;                            /* Убираем рамку вокруг окна */
+    border-radius: 5px;                  /* Закругление углов окна */
+    opacity: 90%;                         /* Прозрачность окна */
+}
+
+listview {
+    columns: 1;                          /* Количество колонок в списке */
+    lines: 7;                            /* Количество строк в списке */
+    fixed-height: true;                  /* Фиксированная высота элементов списка */
+    fixed-columns: true;                 /* Фиксированное количество колонок */
+    cycle: false;                        /* Отключить циклический переход по элементам списка */
+    scrollbar: false;                    /* Убираем полосу прокрутки */
+}
+
+window {
+    transparency: "real";                /* Прозрачность окна */
+    width: 450px;                        /* Ширина окна rofi */
+    border-radius: 8px;                  /* Закругление углов окна (используем конкретное значение)*/
+    background-color: #2e2e2e;          /* Фоновый цвет окна (используем конкретное значение)*/
+    border: 2px solid;                   /* Рамка вокруг окна (используем конкретное значение)*/
+    border-color: #ffcc00;               /* Цвет рамки вокруг окна (используем конкретное значение)*/
+}
+
+prompt {
+    text-color: #ffcc00;                 /* Цвет текста подсказки (используем конкретное значение)*/
+}
+
+inputbar {
+    children: ["prompt", "entry"]; 
+    spacing: 10px;                       /* Отступы между элементами ввода */
+}
+
+entry {
+    placeholder: "Search Apps";          /* Текст плейсхолдера в поле ввода */
+    text-color: #ffcc00;                 /* Цвет текста ввода (используем конкретное значение)*/
+    placeholder-color: #888888FF;        /* Цвет текста плейсхолдера (используем конкретное значение)*/
+}
+
+mainbox {
+    spacing: 10px;                       /* Отступы между элементами основного контейнера */
+}
+
+element {
+    spacing: 10px;                       /* Отступы между элементами списка */
+    margin: 0;
+}
+
+element normal.normal {
+	background-color: transparent;
+	text-color: #ffcc00;
+}
+
+element alternate.normal {
+	background-color: #2e2e2e;
+	text-color: #ffcc00;
+
+}
+
+element selected.active {
+	background-color: #ffcc00;
+	text-color: #ffffff;}
+
+element selected.normal {
+	background-color: #ffcc00;
+	text-color: #ffffff;
+}
+
